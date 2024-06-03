@@ -7,12 +7,23 @@ export default function Page() {
         My Portfolio
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        {`Total experience of 13 years in Technical and Product Support (Software, Hardware, SaaS, CPaaS application support), SCCM, and Project Management. `}
       </p>
+<p className="mb-4">
+        {`Currently working as a Senior Product Support Engineer L4- Supervisor at VMware by Broadcom, managing Pivotal Tracker, a VMware Tanzu observability tool. `}
+      </p>
+<p className="mb-4">
+        {`Also taking on responsibilities as a Technical Program Manager, leading crucial meetings with senior leaders and efficiently resolving critical issues. `}
+      </p>
+<p className="mb-4">
+        {`Responsible for handling escalations, working directly with users and Customer Success teams to solve problems, training new engineers, and providing timely feedback on their progress. `}
+      </p>
+<p className="mb-4">
+        {`Driving process improvements, enhancing product features, and collaborating with development and product managers to deliver exceptional customer experiences. `}
+      </p>
+<p className="mb-4">
+        {`Part of Technical Hiring and Bar Raiser teams. `}
+      </p> 
       <div className="my-8">
         <BlogPosts />
       </div>
