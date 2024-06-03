@@ -4,8 +4,11 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+        Keerthi Vignesh
       </h1>
+      <h2 className="mb-8 text-2xl font-semibold tracking-tighter">
+        About Me
+      </h2>
       <p className="mb-4">
         {`Total experience of 13 years in Technical and Product Support (Software, Hardware, SaaS, CPaaS application support), SCCM, and Project Management. `}
       </p>
