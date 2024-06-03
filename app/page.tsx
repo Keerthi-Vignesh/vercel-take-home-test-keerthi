@@ -6,7 +6,7 @@ export default function Page() {
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         Keerthi Vignesh
       </h1>
-      <h2 className="mb-8 text-2xl font-semibold tracking-tighter">
+      <h2 className="mb-6 text-2xl font-semibold tracking-tighter">
         About Me
       </h2>
       <p className="mb-4">
