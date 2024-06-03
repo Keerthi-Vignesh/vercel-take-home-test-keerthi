@@ -1,0 +1,69 @@
+---
+title: '8.	A customer is creating a site and would like their project not to be indexed by search engines. Please write a reply to the customer. Feel free to add any information about your decision making process after the reply.'
+publishedAt: '2024-06-03'
+---
+
+Hi [Customer Name],
+
+Thank you for reaching out! To ensure your project is not indexed by search engines while hosted on Vercel, you can utilize the ‘X-Robots-Tag’ header with the value `noindex`. This header will instruct search engines not to index your site.
+
+## Steps to Prevent Indexing:
+
+1. **Using `vercel.json`:**
+    a. Create or update your `vercel.json` file in the root directory of your project.
+    b. Add the following configuration to include the `X-Robots-Tag` header:
+
+    ```json
+    {
+      "headers": [
+        {
+          "source": "/(.*)",
+          "headers": [
+            {
+              "key": "X-Robots-Tag",
+              "value": "noindex"
+            }
+          ]
+        }
+      ]
+    }
+    ```
+
+2. **Using `next.config.js` (for Next.js projects):**
+    a. Open your `next.config.js` file.
+    b. Add the following configuration to set the `X-Robots-Tag` header:
+
+    ```js
+    module.exports = {
+      async headers() {
+        return [
+          {
+            source: '/(.*)',
+            headers: [
+              {
+                key: 'X-Robots-Tag',
+                value: 'noindex'
+              }
+            ],
+          },
+        ];
+      },
+    };
+    ```
+
+3. Commit and push your changes to your Git repository.
+4. Deploy your project. Vercel will apply the new headers to your deployment, ensuring search engines do not index your site.
+
+---
+
+**Note:**
+
+Vercel automatically adds the `X-Robots-Tag: noindex` header to preview deployments to prevent them from being indexed by search engines.
+
+For further details, feel free to refer to the Vercel documentation on [headers](https://vercel.com/docs/concepts/projects/project-configuration#headers) and [X-Robots-Tag Header](https://vercel.com/docs/concepts/projects/project-configuration#x-robots-tag-header).
+
+If you encounter any issues or need further assistance, please feel free to reach out. I’m here to help!
+
+Best regards,  
+Keerthi P Vignesh
+

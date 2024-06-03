@@ -1,0 +1,24 @@
+---
+title: '4.	When would you choose to use Edge Functions, Serverless Functions, or Edge Middleware with Vercel?'
+publishedAt: '2024-06-03'
+---
+# Edge Functions
+
+Edge Functions run at the edge of Vercel's network, close to the users, which means they can respond very quickly. They are ideal for tasks that require low latency and high speed.
+
+**Example:** 
+- **API Requests:** Imagine there is a website that needs to display the latest weather data. We can use edge functions to fetch data from an API quickly to display to users. Edge Functions can handle these requests almost instantly, reducing the time users have to wait for the data.
+
+# Serverless Functions
+
+Serverless Functions are functions that run on Vercel's managed infrastructure. They are great for more complex tasks that need full Node.js capabilities but don't need to be as fast as Edge Functions.
+
+**Example:** 
+- **Data Processing:** If we need to process some data, such as resizing images or handling form submissions, Serverless Functions can perform these tasks. They run whenever needed and scale automatically.
+
+# Edge Middleware
+
+Edge Middleware runs before the site processes a request, allowing us to modify the request or response on the fly. This can be useful for personalizing content or redirecting users based on certain conditions.
+
+**Example:** 
+- **Personalization:** Suppose we want to show different content to users based on their location. Edge Middleware can check the user's location and serve personalized content or redirect if necessary.

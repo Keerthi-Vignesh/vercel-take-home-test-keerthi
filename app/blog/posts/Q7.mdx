@@ -1,0 +1,58 @@
+---
+title: '7.	A customer writes in to the Helpdesk asking "How do I do a redirect from the /blog path to https://example.com?" Please write a reply to the customer. Feel free to add any information about your decision making process after the reply.'
+publishedAt: '2024-06-03'
+---
+
+Hi [Customer Name],
+
+Thank you for reaching out to us! I can help you set up a redirect from the ‘/blog’ path to ‘https://example.com’ using Vercel. Here’s how you can do it:
+
+## Steps to Create a Redirect on Vercel:
+
+1. Open your project in the Vercel dashboard.
+2. Locate the `vercel.json` file in the root directory of your project. If you don’t have one, you can create it.
+3. Add the following redirect configuration within the `vercel.json` file:
+
+    ```json
+    {
+      "redirects": [
+        { "source": "/me", "destination": "/profile.html", "permanent": false }
+      ]
+    }
+    ```
+
+4. Save and deploy your changes. This configuration ensures that any requests to `/blog` will be permanently redirected to `https://example.com`.
+
+For more detailed information, you can refer to the Vercel documentation on [redirects](https://vercel.com/docs/concepts/projects/project-configuration#redirects) and [configuration settings](https://vercel.com/docs/concepts/projects/project-configuration).
+
+If you are using Next.js, you can also configure redirects directly in the `next.config.js` file:
+
+    ```js
+    module.exports = {
+      async redirects() {
+        return [
+          {
+            source: '/blog',
+            destination: 'https://example.com',
+            permanent: true,
+          },
+        ];
+      },
+    };
+    ```
+
+Save and deploy your changes. This approach ensures that any requests to `/blog` are redirected to `https://example.com` with a permanent redirect (HTTP status code 308).
+
+If you encounter any issues or need further assistance, please feel free to reach out. I’m here to help!
+
+Best regards,  
+Keerthi P Vignesh
+
+---
+
+**Note:**
+
+In Vercel, there are two primary ways to configure redirects: using the `vercel.json` file and configuring them in the `next.config.js` file.
+
+- The `vercel.json` file is a project configuration file specific to Vercel. This method is suitable for all types of projects deployed on Vercel, regardless of the framework or technology used.
+- The `next.config.js` file is specific to Next.js projects only.
